@@ -1,12 +1,12 @@
+/* Toast Notifications */
 :root {
-	--bg-color-toast: #000000bf;
-	--bg-color-toast-hover: #333333;
+	--bg-color-toast: rgba(26, 21, 53, 0.75);
+	--bg-color-toast-hover: rgba(45, 27, 78, 0.9);
 	--text-color-light: #ffffff;
-	--border-color-toast: #ffffff1a;
-	--progress-bar-color: #ffffff;
-	--toast-close-hover: #b1b1b1;
+	--border-color-toast: rgba(157, 78, 221, 0.35);
+	--progress-bar-color: linear-gradient(90deg, #9d4edd, #4cc9f0);
+	--toast-close-hover: #4cc9f0;
 }
-
 .toast {
 	position: fixed !important;
 	top: 20px;
@@ -24,72 +24,60 @@
 	justify-content: space-between;
 	align-items: center;
 	overflow: hidden;
+	box-shadow: 0 0 22px rgba(157, 78, 221, 0.3);
 }
-
 .toast.success {
 	background-color: var(--bg-color-toast);
 	backdrop-filter: blur(10px);
 }
-
 .toast.error {
 	background-color: var(--bg-color-toast);
 	backdrop-filter: blur(10px);
 }
-
 .toast a {
 	margin-left: 5px;
 	display: inline-block;
 }
-
 .toast.show {
 	animation: slideIn 0.3s forwards;
 }
-
 .toast.hide {
 	animation: slideOut 0.3s forwards;
 }
-
 .toast .progress-bar {
 	position: absolute;
 	bottom: 0;
 	left: 0;
 	height: 4px;
-	background-color: var(--progress-bar-color);
+	background: linear-gradient(90deg, #9d4edd, #4cc9f0);
 	width: 100%;
 	border-radius: 20px;
 	animation: progress 3s linear forwards;
 }
-
 @keyframes slideIn {
 	0% {
 		right: -300px;
 	}
-
 	100% {
 		right: 20px;
 	}
 }
-
 @keyframes slideOut {
 	0% {
 		right: 20px;
 	}
-
 	100% {
 		right: -1000px;
 	}
 }
-
 @keyframes progress {
 	0% {
 		width: 100%;
 	}
-
 	100% {
 		width: 0%;
 	}
 }
-
 .toast .toast-close {
 	background: none;
 	border: none;
@@ -100,9 +88,6 @@
 	margin-left: 10px;
 	transition: 0.3s;
 }
-
 .toast-close:hover {
 	color: var(--toast-close-hover);
 }
-
-/* https://discord.usewaves.site */
