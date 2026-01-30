@@ -42,8 +42,6 @@ let modelSourceValue=localStorage.getItem("selectedModel")||"llama-3.1-8b-instan
 const modelDisplayNames={
   "llama-3.1-8b-instant":"Llama 3.1 8B Instant",
   "llama-3.3-70b-versatile":"Llama 3.3 70B Versatile",
-  "deepseek-r1-distill-llama-70b":"Deepseek R1 Distill Llama 70B",
-  "gemma2-9b-it":"Gemma2 9B IT"
 }
 typeWriterElement(modelSelected,modelDisplayNames[modelSourceValue],20)
 function formatAIResponse(r){
